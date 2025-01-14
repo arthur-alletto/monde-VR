@@ -1,14 +1,59 @@
 <html>
-  <head>
+
+<head>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <a-box position="0 0.5 -4" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.5 -4" radius="0.5" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="0 2.5 -4" rotation="90 30" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+</head>
+
+<body>
+    <a-scene fog="type: exponential; color: #4095A3; density: 0.1">
+        <a-assets>
+            <img id="texturesphere" src="/assets/sphere-texture.jpg">
+            <a-asset-item id="arbre" src="/assets/Palm Tree.glb"></a-asset-item>
+            <a-asset-item id="marche" src="/assets/Market Stalls.glb"></a-asset-item>
+            <a-asset-item id="tonneau" src="/assets/Barrel.glb"></a-asset-item>
+            <a-asset-item id="chaise" src="/assets/Cabin chair.glb"></a-asset-item>
+            <a-asset-item id="table" src="/assets/Dock.glb"></a-asset-item>
+            <a-asset-item id="barriere" src="/assets/Fence.glb"></a-asset-item>
+            <a-asset-item id="charette" src="/assets/Cart.glb"></a-asset-item>
+            <a-asset-item id="diamant" src="/assets/Gem Green.glb"></a-asset-item>
+            <a-asset-item id="aquarium" src="/assets/Fish Tank.glb"></a-asset-item>
+            <a-asset-item id="pedestal" src="/assets/Pedestal.glb"></a-asset-item>
+        </a-assets>
+
+
+        <a-entity gltf-model="#arbre" rotation="0 80 0" position="-3 0 -10" scale="1 1 1"></a-entity>
+
+
+        <a-entity position="-1.2 0 -7.5" animation="property: rotation; to: 15 0 0; dur: 2000; dir: alternate; loop: true; easing: linear">
+            <a-entity gltf-model="#chaise" rotation="0 215 0" position="0 0.75 0" scale="0.7 0.8 0.8"></a-entity>
+        </a-entity>
+
+
+        <a-entity gltf-model="#table" rotation="0 45 0" position="-2.2 0 -7.2" scale="1 1 1"></a-entity>
+
+        <a-entity gltf-model="#charette" rotation="0 -45 0" position="-4.6 0.1 -6" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="#tonneau" rotation="0 0 0" position="-5 0 -5" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="#tonneau" rotation="0 0 0" position="-4.8 0 -5.1" scale="2 2 2"></a-entity>
+        <a-entity gltf-model="#tonneau" rotation="0 180 90" position="-4.6 0.15 -5.1" scale="2 2 2"></a-entity>
+
+        <a-entity gltf-model="#aquarium" rotation="0 90 0" position="-2 -0.5 -14.2" scale="3 5 4"></a-entity>
+        <a-light type="point" color="#ffffff" intensity="3" position="-2 1 -15" penumbra="0.5" distance="5"></a-light>
+
+
+        <a-entity gltf-model="#diamant" rotation="0 0 0" position="0 1.3 -8" scale="
+         0.8 0.8 0.8"></a-entity>
+         <a-light type="point" color="#ffffff" intensity="3" position="0 2 -8"z penumbra="0.5" distance="3"></a-light>
+
+
+        <a-entity gltf-model="#pedestal" rotation="0 0 0" position="0 0 -8" scale="0.3 0.4 0.3"></a-entity>
+
+        <a-entity light="type: ambient; color: #000000"></a-entity>
+        <a-box position="-6 2.5 -8" rotation="0 90 0" depth="0.1" height="5" width="10" color="#"></a-box>
+        <a-box position="-2 0 -8" rotation="90 0 0" depth="0.1" height="10" width="8" color="#"></a-box>
+        <a-box position="2 2.5 -8" rotation="0 90 0" depth="0.1" height="5" width="10" color="#"></a-box>
+
+        <a-sky src="" color=""></a-sky>
     </a-scene>
-  </body>
+</body>
+
 </html>
